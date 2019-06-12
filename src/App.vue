@@ -1,28 +1,34 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="product-custo-page">
+    <TitleBar />
+    <NavBar />
+    <ProductContent />
+    <BottomBar />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+  import TitleBar from './components/TitleBar.vue'
+  import NavBar from './components/NavBar.vue'
+  import ProductContent from './components/ProductContent.vue'
+  import BottomBar from './components/BottomBar.vue'
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld,
-  },
-};
+  export default {
+    components: {
+      TitleBar,
+      NavBar,
+      ProductContent,
+      BottomBar
+    }
+  }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+  @import './sass/reset.sass'
+
+  .product-custo-page
+    display: grid
+    grid-template: 40px 60px auto 82px / auto
+    min-height: 100vh
+    background-color: #eee
 </style>
